@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+checkpoints/
+outputs/
+logs/
+*.log
+wandb/
+interactive_output/
+test_output/
+
+# Hugging Face cache
+.cache/
+*.lock
+
+# Temporary files
+*.tmp
+*.temp
+debug_*
+test_*
+
+# Data files (comment out if you want to include sample data)
+# data/
+
+# Model files (large files)
+*.bin
+*.safetensors
+
+# Jupyter
+.ipynb_checkpoints
+
+# Distributed training generated files
+configs/accelerate/master_config.yaml
+configs/accelerate/worker_config.yaml
+configs/accelerate/node_*_config.yaml
+workers.json
+temp-setup/
+
+# Worker info files
+worker_info.json

@@ -1,0 +1,5 @@
+---
+description: "uv로 의존성을 관리하는 프로젝트에서 터미널에서 스크립트를 실행하려면 먼저 './.venv/Scripts/activate'로 uv 환경을 활성화 시킨후 스크립트를 실행하세요"
+globs:
+alwaysApply: false
+---

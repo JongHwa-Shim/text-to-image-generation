@@ -1,0 +1,24 @@
+SJH-Style FloorPlan Generation 
+[Number and Type of Rooms] 
+The floorplan have 1 living room, 1 master room, 1 kitchen, 1 bathroom, 2 bedroom, 1 balcony, 0 storage, 0 entrance
+
+[Connection Between Rooms]
+living room #1 and master room #1 are connected.
+living room #1 and bedroom #1 are connected.
+living room #1 and bedroom #2 are connected.
+living room #1 and kitchen #1 are connected.
+living room #1 and bathroom #1 are connected.
+master room #1 and balcony #1 are connected.
+kitchen #1 and bathroom #1 are connected.
+
+[Positional Relationship Between Rooms]
+master room #1 is right-below living room #1.
+bedroom #1 is left-below living room #1.
+bedroom #2 is below living room #1.
+kitchen #1 is left-above living room #1.
+bathroom #1 is left-above living room #1.
+bedroom #2 is left-of master room #1.
+balcony #1 is below master room #1.
+bedroom #2 is right-of bedroom #1.
+balcony #1 is right-below bedroom #2.
+bathroom #1 is right-of kitchen #1.

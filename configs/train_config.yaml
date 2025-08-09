@@ -1,0 +1,84 @@
+# Training Configuration
+training:
+  # Model parameters
+  model_name: "runwayml/stable-diffusion-v1-5"
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+  
+  # Training parameters
+  batch_size: 4
+  num_epochs: 100
+  learning_rate: 1e-4
+  weight_decay: 0.01
+  warmup_steps: 500
+  gradient_accumulation_steps: 4
+  
+  # Data parameters
+  image_size: 256
+  num_workers: 4
+  train_split: 0.8
+  val_split: 0.2
+  
+  # Data augmentation - 자연스러운 분포로 실제 사용자 환경 시뮬레이션
+  augmentation:
+    connection_swap_prob: 0.5  # 연결관계 문장당 50% 확률로 순서 바꾸기
+    position_swap_prob: 0.5  # 위치관계 문장당 50% 확률로 순서 바꾸기
+    min_rooms_to_keep: 0  # 0개부터 가능 (방 정보 없이도 생성 가능)
+    max_rooms_to_keep: null  # 상한 없음 (원본 개수까지 가능)
+  
+  # Logging
+  log_every: 100
+  save_every: 1000
+  eval_every: 500
+  
+  # Checkpointing
+  save_dir: "checkpoints"
+  max_checkpoints: 5
+  
+  # Accelerate mixed precision
+  mixed_precision: "fp16"  # Options: "no", "fp16", "bf16"
+  
+  # W&B logging
+  wandb:
+    enabled: true
+    project: "floorplan-diffusion"
+
+# Inference parameters
+inference:
+  num_inference_steps: 50
+  guidance_scale: 7.5
+  seed: 42
+  
+# Post-processing
+post_processing:
+  noise_threshold: 30
+  min_region_size: 10
+  smoothing_kernel_size: 3
+
+# Room color mapping
+room_colors:
+  living_room: [255, 255, 220]
+  master_room: [0, 255, 0]
+  bed_room: [30, 140, 50]
+  kitchen: [190, 90, 90]
+  bathroom: [66, 78, 255]
+  balcony: [50, 180, 255]
+  storage: [210, 210, 90]
+  external_area: [255, 255, 255]
+  wall: [95, 95, 95]
+  front_door: [255, 255, 0]
+  interior_door: [160, 100, 0]
+  entrance: [0, 200, 100]
+  window: [125, 190, 190]
+
+# Positional relationship mapping
+positional_relationships:
+  left: "right"
+  right: "left"
+  above: "below"
+  below: "above"
+  left_below: "right_above"
+  right_above: "left_below"
+  left_above: "right_below"
+  right_below: "left_above" 
