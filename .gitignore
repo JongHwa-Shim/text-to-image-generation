@@ -74,6 +74,10 @@ test_*
 # Data files (comment out if you want to include sample data)
 # data/
 
+# Keep data/train folder structure but ignore txt and png files
+data/train/**/*.txt
+data/train/**/*.png
+
 # Model files (large files)
 *.bin
 *.safetensors
